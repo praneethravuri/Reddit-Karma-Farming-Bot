@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.idea/
 
 # C extensions
 *.so
@@ -80,6 +81,7 @@ target/
 # IPython
 profile_default/
 ipython_config.py
+Videos/
 
 # pyenv
 .python-version
