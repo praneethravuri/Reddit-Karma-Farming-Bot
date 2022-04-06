@@ -2,15 +2,19 @@ from pytube import Playlist, YouTube
 import os
 
 YOUTUBE_PLAYLIST = "https://youtube.com/playlist?list=PL1dtuEdDUMi1yver8hPLGK3rIAH8Pnim2"
-SAVE_LOCATION = "D:\\Coding Projects\\Reddit-Karma-Farming-Bot\\Videos"
+SAVE_LOCATION = "D:\\Coding Projects\\YouTube-Playlist-Video-Downloader\\Videos"
 LINK_FILE = "current_video_link.txt"
 
 
 def download_video(video_link):
-    print(video_link)
+
     yt = YouTube(video_link)
     print(f"Downloading {yt.title}")
+
+    # getting the highest resolution of the video with the file extension -mp4
     stream = yt.streams.filter(progressive=True, file_extension='mp4').get_highest_resolution()
+
+    # downloading the videos in the specified location
     stream.download(SAVE_LOCATION)
     print(f"Downloaded {yt.title}")
 
