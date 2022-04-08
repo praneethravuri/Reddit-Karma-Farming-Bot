@@ -2,4 +2,4 @@
 
 ``$ pip install pytube``
 
-Downloads the latest video in a playlist
+Continuously downloads the latest videos added to the specified playlist
